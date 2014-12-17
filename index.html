@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<?php
+//Close any seesion 
+session_regenerate_id(true);
+	//Start session
+	session_start();	
+	//Unset the variables stored in session
+	unset($_SESSION['SESS_USER_ID']);
+	unset($_SESSION['SESS_USER_FIRST_NAME']);
+	unset($_SESSION['SESS_USER_LAST_NAME']);
+?>
+<html>
+	<body>
+<h1>Login</h1>
+	<div id="login_form">
+    <form name="login_window" method="post" action="login.php" id="f1">
+            <p>Username: <input type="text" name="username" value="" /></p>
+              <p>Password: <input type="password" name="password" value=""/></p>
+                
+                   <p> <input type="submit"  value="Submit"/></p>
+                
+    </form> 
+</div>
+	</body>
+</html>
